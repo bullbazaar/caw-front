@@ -11,7 +11,7 @@ const items = [
   {
     id: 1,
     content: 'FOR',
-    pl: 0,
+    pl: 1,
   },
 ];
 
@@ -51,7 +51,7 @@ export function FlippingText({ textColor }: { textColor: string }) {
             {`${items[index].content}`}
           </chakra.span>
         </m.div>
-        <chakra.span color={textColor} pl={20}>{`TEH  PPL`}</chakra.span>
+        <chakra.span color={textColor} pl="3em">{`TEH  PPL`}</chakra.span>
       </chakra.div>
     </Text>
   );
