@@ -282,7 +282,7 @@
     "signIn": "Sign in with your wallet",
     "awating_cnn": "Awaiting connection...",
     "awating_sign": "Awaiting signature...",
-    "txSubmitted" : "Transaction submitted",
+    "txSubmitted": "Transaction submitted",
     "waitingConfirm": "Waiting for confirmation",
     "confirmTxInWallet": "Confirm this transaction in your wallet",
     "waitConfirmedTx": "Wait for the transaction to be confirmed"

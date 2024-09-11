@@ -38,7 +38,7 @@ export const title = [
   '30 Tips To Grow Your Event',
   '30 Ways To Avoid Event Burnout',
   '30 Ways To Improve Event',
-  'How To Make More Event By Doing Less'
+  'How To Make More Event By Doing Less',
 ];
 
 export const sentence = [
@@ -81,7 +81,7 @@ export const sentence = [
   'Mollitia inventore recusandae provident aut.',
   'Numquam ullam beatae possimus.',
   'Fuga velit cupiditate ex culpa odio aut ut.',
-  'Vero corrupti nam voluptatum excepturi est et.'
+  'Vero corrupti nam voluptatum excepturi est et.',
 ];
 
 export const description = [

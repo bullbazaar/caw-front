@@ -104,9 +104,7 @@
   {
     "inputs": [],
     "name": "CAW",
-    "outputs": [
-      { "internalType": "contract IERC20", "name": "", "type": "address" }
-    ],
+    "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
@@ -131,9 +129,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "address", "name": "owner", "type": "address" }
-    ],
+    "inputs": [{ "internalType": "address", "name": "owner", "type": "address" }],
     "name": "balanceOf",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
@@ -147,9 +143,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "uint64", "name": "tokenId", "type": "uint64" }
-    ],
+    "inputs": [{ "internalType": "uint64", "name": "tokenId", "type": "uint64" }],
     "name": "cawBalanceOf",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
@@ -173,9 +167,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }],
     "name": "getApproved",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
@@ -231,9 +223,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }],
     "name": "ownerOf",
     "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
@@ -294,27 +284,21 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "address", "name": "_cawActions", "type": "address" }
-    ],
+    "inputs": [{ "internalType": "address", "name": "_cawActions", "type": "address" }],
     "name": "setCawActions",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "address", "name": "_minter", "type": "address" }
-    ],
+    "inputs": [{ "internalType": "address", "name": "_minter", "type": "address" }],
     "name": "setMinter",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "address", "name": "_gui", "type": "address" }
-    ],
+    "inputs": [{ "internalType": "address", "name": "_gui", "type": "address" }],
     "name": "setUriGenerator",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -336,9 +320,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "bytes4", "name": "interfaceId", "type": "bytes4" }
-    ],
+    "inputs": [{ "internalType": "bytes4", "name": "interfaceId", "type": "bytes4" }],
     "name": "supportsInterface",
     "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "stateMutability": "view",
@@ -352,9 +334,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "uint256", "name": "index", "type": "uint256" }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "index", "type": "uint256" }],
     "name": "tokenByIndex",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
@@ -371,18 +351,14 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }],
     "name": "tokenURI",
     "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "address", "name": "user", "type": "address" }
-    ],
+    "inputs": [{ "internalType": "address", "name": "user", "type": "address" }],
     "name": "tokens",
     "outputs": [
       {
@@ -425,9 +401,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      { "internalType": "address", "name": "newOwner", "type": "address" }
-    ],
+    "inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
     "name": "transferOwnership",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -436,9 +410,7 @@
   {
     "inputs": [],
     "name": "uriGenerator",
-    "outputs": [
-      { "internalType": "contract CawNameURI", "name": "", "type": "address" }
-    ],
+    "outputs": [{ "internalType": "contract CawNameURI", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },

@@ -272,7 +272,7 @@
     "signIn": "Zaloguj się za pomocą portfela",
     "awating_cnn": "Oczekiwanie na połączenie...",
     "awating_sign": "Oczekiwanie na podpis...",
-    "txSubmitted" : "Transakcja wysłana",
+    "txSubmitted": "Transakcja wysłana",
     "waitingConfirm": "Oczekiwanie na potwierdzenie transakcji",
     "confirmTxInWallet": "Potwierdź tę transakcję w swoim portfelu",
     "waitConfirmedTx": "Poczekaj na potwierdzenie transakcji"

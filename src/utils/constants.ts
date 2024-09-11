@@ -1,10 +1,11 @@
-import { Address } from "wagmi";
+import { Address } from 'wagmi';
 
 export const MILLION = 1000000;
 export const BILLION = MILLION * 1000;
 export const CONTRACT_ERR_NOT_INIT = 'Contract not initialized, please try again in a few seconds';
 export const APP_NAME = 'CAW Social';
-export const APP_DESCRIPTION = 'CAW is a fully decentralized - censorship-resistant on-chain messaging protocol built on top of the Ethereum network for the Future of Decentralized Social Media';
+export const APP_DESCRIPTION =
+  'CAW is a fully decentralized - censorship-resistant on-chain messaging protocol built on top of the Ethereum network for the Future of Decentralized Social Media';
 export const DEFAULT_OG = 'https://teh-eyes.vercel.app/logo.jpeg';
 
 //* CAW CONTRACTS

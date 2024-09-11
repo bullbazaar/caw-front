@@ -12,27 +12,14 @@ export interface Props extends IProps {
 export default function MotionContainer({ animate, action = false, children, ...other }: Props) {
   if (action) {
     return (
-      <Box
-        as={m.div}
-        initial={false}
-        animate={animate ? 'animate' : 'exit'}
-        variants={varContainer()}
-        {...other}
-      >
+      <Box as={m.div} initial={false} animate={animate ? 'animate' : 'exit'} variants={varContainer()} {...other}>
         {children}
       </Box>
     );
   }
 
   return (
-    <Box
-      as={m.div}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={varContainer()}
-      {...other}
-    >
+    <Box as={m.div} initial="initial" animate="animate" exit="exit" variants={varContainer()} {...other}>
       {children}
     </Box>
   );

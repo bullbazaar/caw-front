@@ -18,23 +18,20 @@ export function fDateTimeSuffix(date: Date | string | number) {
 
 export function fToNow(date: Date | string | number) {
   return formatDistanceToNow(new Date(date), {
-    addSuffix: true
+    addSuffix: true,
   });
 }
 
 export function fToNowShorter(date: Date | string | number) {
-
   let res = fToNow(date);
 
-  if (res === 'less than a minute ago')
-    return 'now';
+  if (res === 'less than a minute ago') return 'now';
 
   //* add regex to remove the word ago, about, less thab, almost, over, etc
   res = res.replace(/(about|almost|over|less than|almost|about|over|ago)/g, '');
 
   //* add regex to replace the word days, hours, minutes, seconds, etc with d, h, m, s
   res = res.replace(/(days|day|hours|hour|minutes|minute|seconds|second)/g, function (x) {
-
     switch (x) {
       case 'days':
       case 'day':

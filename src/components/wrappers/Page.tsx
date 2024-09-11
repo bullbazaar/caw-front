@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { forwardRef, type ReactNode } from 'react';
 import { Box, useColorModeValue } from '@chakra-ui/react';
 
-import { iBoxProps } from "src/components/Interface.Props";
-import { APP_NAME, APP_DESCRIPTION, DEFAULT_OG } from 'src/utils/constants'
-import Layout from 'src/layouts'
+import { iBoxProps } from 'src/components/Interface.Props';
+import { APP_NAME, APP_DESCRIPTION, DEFAULT_OG } from 'src/utils/constants';
+import Layout from 'src/layouts';
 import { slugify } from 'src/utils/helper';
 
 export { Layout };
@@ -17,18 +17,11 @@ interface Props extends iBoxProps {
   ogImage?: string;
 }
 
-export function MetaTags({ title, description = APP_DESCRIPTION }: { title: string, description?: string }) {
-
+export function MetaTags({ title, description = APP_DESCRIPTION }: { title: string; description?: string }) {
   return (
     <>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
-      />
-      <meta
-        name="description"
-        content={description?.length > 0 ? description : APP_DESCRIPTION}
-      />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+      <meta name="description" content={description?.length > 0 ? description : APP_DESCRIPTION} />
       <meta name="keywords" content="social network, community, decentralized social network, ethereum, blockchain, web3, share to rewards" />
       <meta name="author" content="Teh CAWMmunity" />
       <meta charSet="UTF-8" />
@@ -55,7 +48,6 @@ export function MetaTags({ title, description = APP_DESCRIPTION }: { title: stri
       <meta data-react-helmet="true" property="twitter:url" content="https://teh-eyes.vercel.app/" />
       <meta data-react-helmet="true" property="twitter:title" content={APP_NAME} />
       <meta data-react-helmet="true" property="twitter:description" content={description} />
-
 
       <meta property="og:url" content="https://teh-eyes.vercel.app/" />
       <meta property="og:site_name" content={APP_NAME} />
@@ -84,31 +76,27 @@ export function MetaTags({ title, description = APP_DESCRIPTION }: { title: stri
   );
 }
 
-const Page = forwardRef<HTMLDivElement, Props>(({ children, title = '', description = APP_DESCRIPTION, ogImage = DEFAULT_OG, meta, ...other }, ref) => {
+const Page = forwardRef<HTMLDivElement, Props>(
+  ({ children, title = '', description = APP_DESCRIPTION, ogImage = DEFAULT_OG, meta, ...other }, ref) => {
+    const bg = useColorModeValue('gray.50', 'gray.900');
 
-  const bg = useColorModeValue('gray.50', 'gray.900');
+    return (
+      <>
+        <Head>
+          <title>{`${title} | ${APP_NAME}`}</title>
+          <meta name="description" content={description} />
 
-  return (
-    <>
-      <Head>
-        <title>{`${title} | ${APP_NAME}`}</title>
-        <meta name="description" content={description} />
+          <MetaTags title={title} description={description} />
+          {meta}
+        </Head>
 
-        <MetaTags title={title} description={description} />
-        {meta}
-      </Head>
-
-      <Box        
-        ref={ref} {...other}
-        id={`page-wrapper-${slugify(title)}`}
-        bg={bg}
-        minH="100vh"
-      >
-        {children}
-      </Box>
-    </>
-  )
-});
+        <Box ref={ref} {...other} id={`page-wrapper-${slugify(title)}`} bg={bg} minH="100vh">
+          {children}
+        </Box>
+      </>
+    );
+  }
+);
 
 Page.displayName = 'PageWrapper';
 export default Page;

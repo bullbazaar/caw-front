@@ -1,4 +1,3 @@
-
 export function randomNumber(number: number) {
   return Math.floor(Math.random() * number) + 1;
 }
@@ -8,5 +7,5 @@ export function randomNumberRange(min: number, max: number) {
 }
 
 export function randomInArray(array: any) {
-  return array[ Math.floor(Math.random() * array.length) ];
+  return array[Math.floor(Math.random() * array.length)];
 }

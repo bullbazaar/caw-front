@@ -22,16 +22,16 @@ i18n
       en: { translations: enLocales },
       es: { translations: esLocales },
       de: { translations: deLocales },
-      pl: { translations: plLocales }
+      pl: { translations: plLocales },
     },
     lng,
     fallbackLng: 'en',
     debug: false,
-    ns: [ 'translations' ],
+    ns: ['translations'],
     defaultNS: 'translations',
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;

@@ -1,18 +1,11 @@
-import { Box, type BoxProps, useToken } from "@chakra-ui/react";
+import { Box, type BoxProps, useToken } from '@chakra-ui/react';
 
 export default function MaintenanceIllustration({ ...other }: BoxProps) {
-
-  const [ PRIMARY_MAIN, PRIMARY_DARKER ] = useToken('colors', [ 'caw.dark', 'caw.darker' ]);
+  const [PRIMARY_MAIN, PRIMARY_DARKER] = useToken('colors', ['caw.dark', 'caw.darker']);
 
   return (
     <Box {...other}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="100%"
-        height="100%"
-        viewBox="0 0 480 360"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 480 360">
         <defs>
           <linearGradient id="linearGradient-1" x1="19.496%" x2="77.479%" y1="71.822%" y2="16.69%">
             <stop offset="0%" stopColor={PRIMARY_MAIN} />
@@ -32,13 +25,7 @@ export default function MaintenanceIllustration({ ...other }: BoxProps) {
             <stop offset="59%" stopColor="#F8924F" />
             <stop offset="100%" stopColor="#F36F56" />
           </linearGradient>
-          <linearGradient
-            id="linearGradient-5"
-            x1="51.677%"
-            x2="47.989%"
-            y1="-28.72%"
-            y2="127.533%"
-          >
+          <linearGradient id="linearGradient-5" x1="51.677%" x2="47.989%" y1="-28.72%" y2="127.533%">
             <stop offset="0%" stopColor="#FFC444" />
             <stop offset="100%" stopColor="#F36F56" />
           </linearGradient>
@@ -77,11 +64,7 @@ export default function MaintenanceIllustration({ ...other }: BoxProps) {
               fillRule="nonzero"
               d="M120.797 136.682a1.812 1.812 0 01-.525 1.378l-1.858 1.858 16.887 16.893a2.174 2.174 0 01-3.074 3.074l-16.886-16.892-1.859 1.859a1.803 1.803 0 01-2.685-.157l-7.916-9.615a1.8 1.8 0 01.14-2.392l5.091-5.093a1.8 1.8 0 012.392-.14l9.612 7.917c.404.32.651.797.681 1.31zM143.727 165.24l5.441 5.443a2.174 2.174 0 01-3.074 3.075l-5.441-5.443a2.175 2.175 0 013.074-3.075z"
             />
-            <path
-              fill="#F4F6F8"
-              fillRule="nonzero"
-              d="M143.727 165.24l5.441 5.443a2.176 2.176 0 010 3.075l-8.515-8.518a2.172 2.172 0 013.074 0z"
-            />
+            <path fill="#F4F6F8" fillRule="nonzero" d="M143.727 165.24l5.441 5.443a2.176 2.176 0 010 3.075l-8.515-8.518a2.172 2.172 0 013.074 0z" />
             <path
               fill="#919EAB"
               fillRule="nonzero"

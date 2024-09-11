@@ -1,17 +1,10 @@
-import { ChakraProvider, cookieStorageManagerSSR, localStorageManager } from '@chakra-ui/react'
+import { ChakraProvider, cookieStorageManagerSSR, localStorageManager } from '@chakra-ui/react';
 
-export function Chakra({ cookies, children }: { cookies: string, children: any }) {
+export function Chakra({ cookies, children }: { cookies: string; children: any }) {
   // b) Pass `colorModeManager` prop
-  const colorModeManager =
-    typeof cookies === 'string'
-      ? cookieStorageManagerSSR(cookies)
-      : localStorageManager
+  const colorModeManager = typeof cookies === 'string' ? cookieStorageManagerSSR(cookies) : localStorageManager;
 
-  return (
-    <ChakraProvider colorModeManager={colorModeManager}>
-      {children}
-    </ChakraProvider>
-  )
+  return <ChakraProvider colorModeManager={colorModeManager}>{children}</ChakraProvider>;
 }
 
 // also export a reusable function getServerSideProps
@@ -22,5 +15,5 @@ export function getServerSideProps({ req }: { req: any }) {
       // undefined here, hence ?? is necessary
       cookies: req.headers.cookie ?? '',
     },
-  }
+  };
 }

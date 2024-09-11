@@ -3,16 +3,15 @@ import Page500 from 'src/pages/500';
 
 type Props = {
   children?: ReactNode;
-}
+};
 
 interface State {
   hasError: boolean;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-
   public state: State = {
-    hasError: false
+    hasError: false,
   };
 
   public static getDerivedStateFromError(): State {

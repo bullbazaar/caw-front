@@ -12,32 +12,26 @@ Page404.getLayout = function getLayout(page: React.ReactElement) {
 };
 
 export default function Page404() {
-
   const { t } = useTranslation();
   const bg = useColorModeValue('gray.50', 'gray.900');
 
   return (
     <PageWrapper title={t('404_page.title')}>
-      <Container w="full" maxW={"container.xl"} h="container.lg" p={10} bg={bg}>
+      <Container w="full" maxW={'container.xl'} h="container.lg" p={10} bg={bg}>
         <Box sx={{ maxWidth: 480, margin: 'auto', textAlign: 'center' }}>
           <m.div variants={varBounce().in}>
             <Heading variant="h3" p={3}>
               {t('404_page.title')}
             </Heading>
           </m.div>
-          <Text color='gray.600' p={3}>
+          <Text color="gray.600" p={3}>
             {t('404_page.description')}
           </Text>
           <m.div variants={varBounce().in}>
             <PageNotFoundIllustration height={260} my={{ base: 5, sm: 10 }} />
           </m.div>
           <NextLink href="/" passHref>
-            <Button
-              size="lg"
-              variant="solid"
-              color="gray.800"
-              colorScheme="caw"
-            >
+            <Button size="lg" variant="solid" color="gray.800" colorScheme="caw">
               {t('buttons.go_home')}
             </Button>
           </NextLink>

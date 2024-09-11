@@ -4,7 +4,7 @@ import { Box, IconButton, IconButtonProps, ResponsiveValue } from '@chakra-ui/re
 
 type AnimateWrapProp = {
   children: ReactNode;
-  size: ResponsiveValue<string | "sm" | "md" | "lg" | "xs">
+  size: ResponsiveValue<string | 'sm' | 'md' | 'lg' | 'xs'>;
 };
 
 const varSmall = {
@@ -41,14 +41,12 @@ function AnimateWrap({ size, children }: AnimateWrapProp) {
   );
 }
 
-const IconButtonAnimate = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ children, size = 'medium', ...other }, ref) => (
-    <AnimateWrap size={size}>
-      <IconButton size={size} ref={ref} {...other}>
-        {children}
-      </IconButton>
-    </AnimateWrap>
-  )
-);
+const IconButtonAnimate = forwardRef<HTMLButtonElement, IconButtonProps>(({ children, size = 'medium', ...other }, ref) => (
+  <AnimateWrap size={size}>
+    <IconButton size={size} ref={ref} {...other}>
+      {children}
+    </IconButton>
+  </AnimateWrap>
+));
 
 export default IconButtonAnimate;

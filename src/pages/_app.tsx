@@ -1,13 +1,12 @@
-import { type ReactElement, type ReactNode, lazy, Suspense } from "react";
-import { type AppProps } from "next/app";
-import { NextPage } from "next/types/index";
+import { type ReactElement, type ReactNode, lazy, Suspense } from 'react';
+import { type AppProps } from 'next/app';
+import { NextPage } from 'next/types/index';
 
-import "src/styles/globals.css";
-import "@rainbow-me/rainbowkit/styles.css";
-import "../locales/i18n";
+import 'src/styles/globals.css';
+import '@rainbow-me/rainbowkit/styles.css';
+import '../locales/i18n';
 
-import Loading from "src/components/loaders/PageLoader";
-
+import Loading from 'src/components/loaders/PageLoader';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -20,7 +19,6 @@ interface MyAppProps extends AppProps {
 const Providers = lazy(() => import('src/context/Providers'));
 
 const App = (props: MyAppProps) => {
-
   const { Component, pageProps } = props;
   const getLayout = Component.getLayout ?? ((page) => page);
 

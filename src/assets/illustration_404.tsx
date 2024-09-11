@@ -1,8 +1,7 @@
 import { Box, BoxProps, useToken } from '@chakra-ui/react';
 
 export default function PageNotFoundIllustration({ ...other }: BoxProps) {
-
-  const [ PRIMARY_MAIN, PRIMARY_DARKER ] = useToken('colors', [ 'caw.dark', 'caw.darker' ]);
+  const [PRIMARY_MAIN, PRIMARY_DARKER] = useToken('colors', ['caw.dark', 'caw.darker']);
 
   return (
     <Box {...other}>

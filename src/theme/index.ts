@@ -1,39 +1,39 @@
-import { extendTheme, StyleFunctionProps } from '@chakra-ui/react'
-import { StyleConfig } from "@chakra-ui/theme-tools";
-import foundations from './foundations'
+import { extendTheme, StyleFunctionProps } from '@chakra-ui/react';
+import { StyleConfig } from '@chakra-ui/theme-tools';
+import foundations from './foundations';
 
-const direction = 'ltr'
+const direction = 'ltr';
 
 const config = {
   useSystemColorMode: true,
   initialColorMode: 'light',
   cssVarPrefix: 'teh',
   colorSchema: 'caw',
-  theme: 'caw'
-}
+  theme: 'caw',
+};
 
 const components: Record<string, StyleConfig> = {
   CustomBadge: {
     baseStyle: ({ colorMode }) => ({
-      bg: colorMode === "dark" ? "green.300" : "green.500",
-      color: colorMode === "dark" ? "gray.800" : "white",
-      textTransform: "uppercase",
-      fontWeight: "semibold",
-      letterSpacing: "0.02em",
-      padding: "4px",
-      borderRadius: "2px",
-      fontSize: "12px"
+      bg: colorMode === 'dark' ? 'green.300' : 'green.500',
+      color: colorMode === 'dark' ? 'gray.800' : 'white',
+      textTransform: 'uppercase',
+      fontWeight: 'semibold',
+      letterSpacing: '0.02em',
+      padding: '4px',
+      borderRadius: '2px',
+      fontSize: '12px',
     }),
     variants: {
       custom: ({ colorMode }) => ({
-        bg: colorMode === "dark" ? "blue.200" : "blue.500",
-        padding: "8px"
-      })
-    }
+        bg: colorMode === 'dark' ? 'blue.200' : 'blue.500',
+        padding: '8px',
+      }),
+    },
   },
   Text: {
     baseStyle: ({ colorMode }) => ({
-      color: colorMode === "dark" ? "gray.50" : "gray.800",
+      color: colorMode === 'dark' ? 'gray.50' : 'gray.800',
     }),
     variants: {
       'with-shadow': {
@@ -50,7 +50,6 @@ const components: Record<string, StyleConfig> = {
         fontSize: 'md',
       },
     },
-
   },
   // Textarea: {
   //   baseStyle: ({ colorMode }) => ({
@@ -98,17 +97,17 @@ const components: Record<string, StyleConfig> = {
   // },
   Flex: {
     baseStyle: ({ colorMode }) => ({
-      color: colorMode === "dark" ? "gray.50" : "gray.800",
+      color: colorMode === 'dark' ? 'gray.50' : 'gray.800',
     }),
   },
   Divider: {
     baseStyle: ({ colorMode }) => ({
-      borderColor: colorMode === "dark" ? "gray.700" : "gray.400",
+      borderColor: colorMode === 'dark' ? 'gray.700' : 'gray.400',
     }),
   },
   Button: {
     baseStyle: ({ colorMode, colorScheme }) => ({
-      borderRadius: "md",
+      borderRadius: 'md',
     }),
   },
   MenuList: {
@@ -131,11 +130,11 @@ export const theme = {
   styles: {
     global: () => ({
       body: {
-        bg: "gray.50",
+        bg: 'gray.50',
       },
     }),
   },
-}
+};
 
 //* overide default text color to white for black background.  Adding brand colors
 export default extendTheme(theme);

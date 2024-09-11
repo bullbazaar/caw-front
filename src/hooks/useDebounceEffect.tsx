@@ -9,5 +9,5 @@ export const useDebounceEffect = (effect: EffectCallback, delay: number, deps?: 
     // using || operator because
     // if its optional then it can be undefined.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ ...(deps || []), delay ]);
+  }, [...(deps || []), delay]);
 };
