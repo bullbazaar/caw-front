@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 import { chakra, Box, useColorModeValue, VStack, Text, Stack, Button, HStack, Image } from '@chakra-ui/react';
 
 import { MotionViewport, varFade } from 'src/components/animate';
-import { alpha } from 'src/theme/foundations/colors';
+import { alpha } from 'src/utils/helper';
 import { PATH_PAGE } from 'src/routes/paths';
 
 const COMMON = {

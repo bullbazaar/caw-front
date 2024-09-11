@@ -1,5 +1,4 @@
 import { uuidv4 } from 'src/utils/helper';
-import { schemes } from 'src/theme/foundations/colors';
 
 export type DataModel = {
   id: string;
@@ -9,6 +8,27 @@ export type DataModel = {
   backgroundColor: string;
   textColor: string;
 };
+
+export const SCHEMES = [
+  'gray',
+  'blue',
+  'cyan',
+  'green',
+  'orange',
+  'pink',
+  'purple',
+  'red',
+  'teal',
+  'yellow',
+  'whatsapp',
+  'twitter',
+  'facebook',
+  'messenger',
+  'linkedin',
+  'telegram',
+  'caw',
+  'blueCaw',
+] as const;
 
 function randomColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -35,7 +55,7 @@ const randomTextColor = (backgroundColor: string) => {
 
 const getData = (title: string, description: string): DataModel => {
   const bg = randomColor();
-  const colorSchema = schemes[Math.floor(Math.random() * schemes.length)];
+  const colorSchema = SCHEMES[Math.floor(Math.random() * SCHEMES.length)];
 
   const _d: DataModel = {
     id: uuidv4(),

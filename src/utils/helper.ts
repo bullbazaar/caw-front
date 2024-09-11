@@ -1,5 +1,9 @@
 import packageJson from '../../package.json';
 
+export function alpha(color: string, alpha: number) {
+  return `rgba(${color}, ${alpha})`;
+}
+
 export function slugify(text: string) {
   return text
     .toString()
