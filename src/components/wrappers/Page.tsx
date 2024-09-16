@@ -2,14 +2,13 @@ import Head from 'next/head';
 import { forwardRef, type ReactNode } from 'react';
 import { Box, useColorModeValue } from '@chakra-ui/react';
 
-import { iBoxProps } from 'src/components/Interface.Props';
+import type { BoxProps } from '@chakra-ui/react';
 import { APP_NAME, APP_DESCRIPTION, DEFAULT_OG } from 'src/utils/constants';
-import Layout from 'src/layouts';
 import { slugify } from 'src/utils/helper';
 
-export { Layout };
+export { default as Layout } from 'src/layouts/Layout';
 
-interface Props extends iBoxProps {
+interface Props extends BoxProps {
   children: ReactNode;
   meta?: ReactNode;
   title: string;

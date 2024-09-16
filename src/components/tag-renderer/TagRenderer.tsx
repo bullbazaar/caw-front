@@ -1,8 +1,6 @@
 import { createElement } from 'react';
 import { uuidv4 } from 'src/utils/helper';
-import { parse, TagType, ActionTagEvent } from './parser';
-
-export type { TagType, ActionTagEvent };
+import { parse, ActionTagEvent } from './parser';
 
 const hashtagRenderer = (createElement: any, style: React.CSSProperties) => (hashtag: string, onClick: ActionTagEvent) =>
   createElement(
@@ -56,7 +54,7 @@ const urlRenderer = (createElement: any, style: React.CSSProperties) => (hashtag
     hashtag
   );
 
-type HashTagRenderProps = {
+type TagRendererProps = {
   children: React.ReactNode[] | string;
   htStyle?: React.CSSProperties;
   mtStyle?: React.CSSProperties;
@@ -71,7 +69,7 @@ const minStyle: React.CSSProperties = {
   color: 'limegreen',
 };
 
-export default function HashTagRender(props: HashTagRenderProps) {
+export default function TagRenderer(props: TagRendererProps) {
   const { children, htStyle = {}, mtStyle = {}, urlStyle = {}, stockStyle = {}, onActionTag } = props;
   const contents = typeof children === 'object' && children.length ? (!isNaN(children.length) ? children[0] : children) : children;
 

@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import PageWrapper, { Layout } from 'src/components/wrappers/Page';
 import Iconify from 'src/components/icons/Iconify';
 
-const WallPost = dynamic(() => import('src/blocks/wall'), { ssr: false });
+const Wall = dynamic(() => import('src/components/home/Wall'), { ssr: false });
 
 HomePage.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout variant="dashboard">{page}</Layout>;
@@ -30,7 +30,7 @@ export default function HomePage() {
           <Box m={4} display={{ base: 'block', xl: 'none' }}>
             <SearchCawInput />
           </Box>
-          <WallPost />
+          <Wall />
         </Box>
         <Box w={{ base: '100%', xl: '15%' }} display={{ xl: 'block', base: 'none' }}>
           <SearchCawInput />

@@ -3,10 +3,10 @@ import { Container, Spacer } from '@chakra-ui/react';
 import { useTranslation } from 'src/hooks';
 import PageWrapper, { Layout } from 'src/components/wrappers/Page';
 import { MotionLazyContainer } from 'src/components/animate';
-import HeroSection from 'src/blocks/home/HeroSection';
-import PoweredSection from 'src/blocks/home/PoweredSection';
-import EconomySection from 'src/blocks/home/EconomySection';
-import CardParallaxSection from 'src/blocks/home/CardParallaxSection';
+import HeroSection from 'src/components/landing/HeroSection';
+import PoweredSection from 'src/components/landing/PoweredSection';
+import EconomySection from 'src/components/landing/EconomySection';
+import CardParallaxSection from 'src/components/landing/CardParallaxSection';
 
 // const HeroSection = lazy(() => import('src/sections/home/HeroSection'));
 // const PoweredSection = lazy(() => import('src/sections/home/PoweredSection'));

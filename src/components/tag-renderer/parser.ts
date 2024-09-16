@@ -3,7 +3,7 @@ export type ActionTagEvent = (ht: string, type: TagType, element: any) => void;
 
 const rule = /([#@$\bwww\bhttp|#@$\bwww\bhttp][^\s]+)/g;
 
-type parserProps = {
+type ParserParams = {
   value: any;
   htRenderer: any;
   linkRenderer: any;
@@ -12,7 +12,7 @@ type parserProps = {
   action: ActionTagEvent;
 };
 
-export const parse = ({ value, htRenderer, linkRenderer, atRenderer, stockRenderer, action }: parserProps) => {
+export const parse = ({ value, htRenderer, linkRenderer, atRenderer, stockRenderer, action }: ParserParams) => {
   if (!value?.split) return value;
 
   const hts = value.split(rule).map((chunk: string) => {

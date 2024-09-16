@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box } from '@chakra-ui/react';
 
-import { posts } from 'src/utils/mock/wallposts';
-import NewPost from 'src/blocks/post/NewPost';
-import Post from 'src/blocks/post';
 import { PostDto } from 'src/types/community-feed';
+import { posts } from 'src/utils/mock/wallposts';
+import Post from 'src/components/post/Post';
+import NewPost from './NewPost';
 
-export default function WallPost() {
+export default function Wall() {
   //* Pagination rendering logic
   const { t } = useTranslation();
   const [data, setData] = useState<PostDto[]>([]);

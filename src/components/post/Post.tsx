@@ -1,9 +1,9 @@
 import { useCallback } from 'react';
 import { Box, Divider, useColorModeValue, useToken } from '@chakra-ui/react';
 
+import type { PostDto } from 'src/types/community-feed';
+import type { TagType } from 'src/components/tag-renderer/parser';
 import PostContent from 'src/components/PostContent';
-import { TagType } from 'src/components/tag-parser/parser';
-import { PostDto } from 'src/types/community-feed';
 import PostAvatar from './PostAvatar';
 import PostActions from './PostActions';
 

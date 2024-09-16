@@ -1,7 +1,7 @@
 import { Text, useColorModeValue } from '@chakra-ui/react';
 
-import { TextAlign } from 'src/components/Interface.Props';
-import HashTagRender, { ActionTagEvent } from './tag-parser';
+import type { TextAlign } from 'src/types/interface-props';
+import TagRenderer, { ActionTagEvent } from './tag-renderer';
 
 type Props = {
   align?: TextAlign;
@@ -12,15 +12,16 @@ type Props = {
   content: React.ReactNode[] | string;
 };
 
-export default function PostContent(props: Props) {
-  const { align, htStyle, mtStyle, urlStyle, content, onHashtagClick } = props;
+const PostContent: React.FC<Props> = ({ align, htStyle, mtStyle, urlStyle, content, onHashtagClick }) => {
   const textColor = useColorModeValue('gray.900', 'gray.50');
 
   return (
     <Text as="p" textAlign={align} fontSize="md" color={textColor}>
-      <HashTagRender htStyle={htStyle} mtStyle={mtStyle} urlStyle={urlStyle} onActionTag={onHashtagClick}>
+      <TagRenderer htStyle={htStyle} mtStyle={mtStyle} urlStyle={urlStyle} onActionTag={onHashtagClick}>
         {content}
-      </HashTagRender>
+      </TagRenderer>
     </Text>
   );
-}
+};
+
+export default PostContent;
