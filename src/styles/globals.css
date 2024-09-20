@@ -77,13 +77,14 @@ a {
 
   .landing-title-fade-in {
     animation: landing-title-fade-in 500ms forwards ease-out;
-    animation-delay: 400ms;
+    animation-delay: 200ms;
     opacity: 0;
     transform: translateY(-100px);
   }
 
   .landing-cards-zoom-in {
-    animation: landing-cards-zoom-in 4s forwards ease-out;
+    animation: landing-cards-zoom-in 4s forwards ease-in-out;
+    animation-delay: 500ms;
     transform: scale(1.2);
   }
 }
