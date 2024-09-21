@@ -13,11 +13,11 @@ import CardParallaxSection from 'src/components/landing/CardParallaxSection';
 // const EconomySection = lazy(() => import('src/sections/home/EconomySection'));
 // const CardParallaxSection = lazy(() => import('src/sections/home/CardParallaxSection'));
 
-HomePage.getLayout = function getLayout(page: React.ReactElement) {
+Landing.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout variant="landing">{page}</Layout>;
 };
 
-export default function HomePage() {
+export default function Landing() {
   const { t } = useTranslation();
 
   return (
