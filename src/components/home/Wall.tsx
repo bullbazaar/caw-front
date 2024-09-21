@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Box } from '@chakra-ui/react';
 
 import { PostDto } from 'src/types/community-feed';
 import { posts } from 'src/utils/mock/wallposts';
 import Post from 'src/components/post/Post';
-import NewPost from './NewPost';
+import { motion } from 'framer-motion';
+
+const cols: 1 | 2 = 2;
 
 export default function Wall() {
   //* Pagination rendering logic
@@ -21,15 +22,15 @@ export default function Wall() {
     }, 50);
   }, []);
 
+  if (loading) return <div>{t('labels.loading')}</div>;
+
   return (
-    <Box m={{ base: 3, md: 6 }}>
-      {loading && <div>{t('labels.loading')}</div>}
-      {!loading && <NewPost />}
-      {data.map((post) => (
-        <div key={post.id}>
-          <Post post={post} />
-        </div>
-      ))}
-    </Box>
+    <motion.div
+      layout
+      className="grid auto-rows-[10px] grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] flex-col gap-[16px]"
+      style={{ display: cols === 2 ? 'grid' : 'flex' }}
+    >
+      {!loading && data.map((post) => <Post key={post.id} post={post} />)}
+    </motion.div>
   );
 }

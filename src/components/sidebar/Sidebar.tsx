@@ -33,8 +33,9 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const borderRightColor = useColorModeValue('gray.400', 'gray.700');
-  const bg = useColorModeValue('gray.50', 'gray.900');
-  const sidebarBg = useColorModeValue('gray.100', 'gray.900');
+  // const bg = useColorModeValue('gray.50', 'gray.900');
+  // const sidebarBg = useColorModeValue('gray.100', 'gray.900');
+  const bg = useColorModeValue('gray.100', 'gray.900');
 
   return (
     <Box id="sidebar" minH="100vh" bg={bg}>
@@ -42,7 +43,7 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
         id="sidebar-content"
         onClose={onClose}
         display={{ base: 'none', md: 'block' }}
-        bg={sidebarBg}
+        bg={bg}
         borderRightColor={borderRightColor}
         borderRightStyle="dashed"
         style={{ width: `${DASHBOARD_WIDTH}px` }}
@@ -82,10 +83,10 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
       </Drawer>
       <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
       <Box id="main-content" ml={{ base: 0, md: DASHBOARD_WIDTH }}>
-        <Show above="md">
-          <TopBar />
-        </Show>
-        <chakra.div id="main-content-wrapper-children" p="4" pt={{ base: 16, md: 8 }}>
+        {/* <Show above="md"> */}
+        {/*   <TopBar /> */}
+        {/* </Show> */}
+        <chakra.div id="main-content-wrapper-children" p="4">
           {children}
         </chakra.div>
       </Box>

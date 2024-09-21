@@ -77,7 +77,7 @@ export function MetaTags({ title, description = APP_DESCRIPTION }: { title: stri
 
 const Page = forwardRef<HTMLDivElement, Props>(
   ({ children, title = '', description = APP_DESCRIPTION, ogImage = DEFAULT_OG, meta, ...other }, ref) => {
-    const bg = useColorModeValue('gray.50', 'gray.900');
+    // const bg = useColorModeValue('gray.50', 'gray.900');
 
     return (
       <>
@@ -89,7 +89,7 @@ const Page = forwardRef<HTMLDivElement, Props>(
           {meta}
         </Head>
 
-        <Box ref={ref} {...other} id={`page-wrapper-${slugify(title)}`} bg={bg} minH="100vh">
+        <Box ref={ref} {...other} id={`page-wrapper-${slugify(title)}`} minH="100vh">
           {children}
         </Box>
       </>

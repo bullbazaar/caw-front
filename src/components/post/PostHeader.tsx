@@ -20,12 +20,12 @@ type Props = {
   onDelete?: VoidFunction;
 };
 
-export default function PostAvatar(props: Props) {
+export default function PostHeader(props: Props) {
   const { displayName, username, verified, date, postId } = props;
   const profileUrl = PATH_DASHBOARD.user.profile.replace(':username', username);
 
   return (
-    <Stack direction="row" spacing={1} alignItems="center" id={`avatar-post-${postId}`}>
+    <Stack direction="row" spacing={3} alignItems="center" id={`avatar-post-${postId}`}>
       <NextLink href={profileUrl} passHref>
         <div>
           <Blockies seed={displayName.toLowerCase()} scale={5} size={8} className="rounded-full" />

@@ -6,23 +6,23 @@ import Iconify from 'src/components/icons/Iconify';
 
 type Props = {
   likes: number;
-  dislikes: number;
+  // dislikes: number;
   comments: number;
   votes: number;
   shared: number;
 };
 
-export default function PostActions({ likes, comments, shared, dislikes }: Props) {
+const PostActions: React.FC<Props & React.HTMLProps<HTMLDivElement>> = ({ likes, comments, shared, className, ...props }) => {
   return (
-    <HStack direction="row" spacing={4} alignItems="center">
+    <div className={`flex flex-row items-center gap-4 ${className}`} {...props}>
       {LikeAction(likes)}
       {/* {DislikeAction(dislikes)} */}
       {CommentsAction(comments)}
       {SharingAction(shared)}
       {BlockScan()}
-    </HStack>
+    </div>
   );
-}
+};
 
 function SharingAction(shared: number) {
   const { t } = useTranslation();
@@ -84,3 +84,5 @@ function BlockScan() {
     </Tooltip>
   );
 }
+
+export default PostActions;
